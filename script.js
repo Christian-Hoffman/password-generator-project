@@ -1,5 +1,6 @@
 var generateBtn = document.querySelector("#generate");
 
+// Possible characters to use in random password
 var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var numbers = ['1','2','3','4','5','6','7','8','9','0'];
@@ -14,6 +15,7 @@ function generatePassword() {
       return;
     }
     
+  // Asks if user wants uppercase letters in password
   var useuppercase = confirm('Do you want to include Uppercase Letters?');
   if(useuppercase) {
     console.log('Your password will contain Uppercase Letters');
@@ -23,6 +25,7 @@ function generatePassword() {
     alert('Your password will NOT contain Uppercase Letters')
   }
 
+  // Asks if user wants lowercase letters in password
   var uselowercase = confirm('Do you want to include Lowercase Letters?');
   if(uselowercase) {
     console.log('Your password will contain Lowercase Letters');
@@ -32,6 +35,7 @@ function generatePassword() {
     alert('Your password will NOT contain Lowercase Letters')
   }
 
+  // Asks if user wants numbers in password
   var usenumbers = confirm('Do you want to include Numbers?');
   if(usenumbers) {
     console.log('Your password will contain Numbers');
@@ -41,6 +45,7 @@ function generatePassword() {
     alert('Your password will NOT contain Numbers')
   }
 
+  // Asks if user wants special characters in password
   var usespecial = confirm('Do you want to include Special Characters?');
   if(usespecial) {
     console.log('Your password will contain Special Characters');
@@ -51,12 +56,14 @@ function generatePassword() {
   }
 
   var confirmed = [];
-  
+  // If no character types were selected, alert user with a message
   if(!useuppercase && !uselowercase && !usenumbers && !usespecial) {
+    console.log('You must choose at least 1 type of characters');
     alert('You must choose at least 1 type of characters');
     return;
   }
 
+  // Add types of characters to confirmed array if user selected them
   if(useuppercase) {
     for (var x of uppercase) {
       confirmed.push(x);
@@ -80,6 +87,7 @@ function generatePassword() {
 
 console.log(confirmed);
 
+// Random password will generate and show as an alert on screen and in console log
 var randomPassword = '';
   for (var x = 0; x < length; x++) {
     randomPassword = '' + randomPassword + confirmed[Math.floor(Math.random()*confirmed.length)];
