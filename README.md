@@ -6,7 +6,7 @@
 3. [Credits](#credits)
 
 ## Description
-[Random Password Generator]()
+[Random Password Generator](https://christian-hoffman.github.io/password-generator-project/)
 <br>
 The random password generator website was built so that users may obtain a randomly
 generated password according to their specifications.\
