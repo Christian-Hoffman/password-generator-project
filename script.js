@@ -15,41 +15,40 @@ function generatePassword() {
     }
     
   var useuppercase = confirm('Do you want to include Uppercase Letters?');
-    if(useuppercase) {
-      console.log('Your password will contain Uppercase Letters');
-      alert('Your password will contain Uppercase Letters')
-    }
-    else if(!useuppercase) {
-      console.log('Your password will NOT contain Uppercase Letters');
-      alert('Your password will NOT contain Uppercase Letters')
-    }
+  if(useuppercase) {
+    console.log('Your password will contain Uppercase Letters');
+    alert('Your password will contain Uppercase Letters')
+  } else if(!useuppercase) {
+    console.log('Your password will NOT contain Uppercase Letters');
+    alert('Your password will NOT contain Uppercase Letters')
+  }
+
   var uselowercase = confirm('Do you want to include Lowercase Letters?');
-    if(useuppercase) {
-      console.log('Your password will contain Lowercase Letters');
-      alert('Your password will contain Lowercase Letters')
-    }
-    else if(!uselowercase) {
-      console.log('Your password will NOT contain Lowercase Letters');
-      alert('Your password will NOT contain Lowercase Letters')
-    }
+  if(uselowercase) {
+    console.log('Your password will contain Lowercase Letters');
+    alert('Your password will contain Lowercase Letters')
+  } else if(!uselowercase) {
+    console.log('Your password will NOT contain Lowercase Letters');
+    alert('Your password will NOT contain Lowercase Letters')
+  }
+
   var usenumbers = confirm('Do you want to include Numbers?');
-    if(useuppercase) {
-      console.log('Your password will contain Numbers');
-      alert('Your password will contain Numbers')
-    }
-    else if(!usenumbers) {
-      console.log('Your password will NOT contain Numbers');
-      alert('Your password will NOT contain Numbers')
-    }
+  if(usenumbers) {
+    console.log('Your password will contain Numbers');
+    alert('Your password will contain Numbers')
+  } else if(!usenumbers) {
+    console.log('Your password will NOT contain Numbers');
+    alert('Your password will NOT contain Numbers')
+  }
+  
   var usespecial = confirm('Do you want to include Special Characters?');
-    if(useuppercase) {
-      console.log('Your password will contain Special Characters');
-      alert('Your password will contain Special Characters')
-    }
-    else if (!usespecial) {
-      console.log('Your password will NOT contain Special Characters');
-      alert('Your password will NOT contain Special Characters')
-    }
+  if(usespecial) {
+    console.log('Your password will contain Special Characters');
+    alert('Your password will contain Special Characters')
+  } else if (!usespecial) {
+    console.log('Your password will NOT contain Special Characters');
+    alert('Your password will NOT contain Special Characters')
+  }
 
   var confirmed = [];
   
