@@ -5,14 +5,14 @@ var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 var numbers = ['1','2','3','4','5','6','7','8','9','0'];
 var special = ['!','@','#','$','%','^','&','*'];
 
-var length = 0;
+// var length = 0;
 
 function generatePassword() {
-  // length = prompt('Enter password length');
-  // if(length < 8; length > 128) {
-    // alert('Password length must be between 8 and 128 characters');
-    // return;
-  // }
+  length = prompt('Enter password length');
+    if(!length | length < 8 | length > 128) {
+      alert('Password length must be between 8 and 128 characters');
+      return;
+    }
     
   var useuppercase = confirm('Do you want to include Uppercase Letters?');
   var uselowercase = confirm('Do you want to include Lowercase Letters?');
@@ -44,6 +44,11 @@ function generatePassword() {
 
 console.log(confirmed);
 
+var randomPassword = '';
+  for (var x = 0; x < length; x++) {
+    randomPassword = '' + randomPassword + confirmed[Math.floor(Math.random()*confirmed.length)];
+  }
+  console.log('Randomly Generated Password is ' + randomPassword)
 }
 
 
