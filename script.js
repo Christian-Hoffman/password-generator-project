@@ -5,7 +5,7 @@ var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 var numbers = ['1','2','3','4','5','6','7','8','9','0'];
 var special = ['!','@','#','$','%','^','&','*'];
 
-// var length = 0;
+var length = 0;
 
 function generatePassword() {
   length = prompt('Enter password length');
@@ -40,7 +40,7 @@ function generatePassword() {
     console.log('Your password will NOT contain Numbers');
     alert('Your password will NOT contain Numbers')
   }
-  
+
   var usespecial = confirm('Do you want to include Special Characters?');
   if(usespecial) {
     console.log('Your password will contain Special Characters');
@@ -85,8 +85,10 @@ var randomPassword = '';
     randomPassword = '' + randomPassword + confirmed[Math.floor(Math.random()*confirmed.length)];
   }
   console.log('Randomly Generated Password is ' + randomPassword)
-}
 
+alert('Your randomly generated password is ' + randomPassword)
+
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -94,7 +96,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
