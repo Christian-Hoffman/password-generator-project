@@ -14,6 +14,9 @@ function generatePassword() {
       alert('Password length must be between 8 and 128 characters');
       return;
     }
+  
+  console.log('Your password will be ' + length + ' characters long');
+  alert('Your password will be ' + length + ' characters long'); 
     
   // Asks if user wants uppercase letters in password
   var useuppercase = confirm('Do you want to include Uppercase Letters?');
