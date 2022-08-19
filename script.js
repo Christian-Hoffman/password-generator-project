@@ -9,6 +9,7 @@ var special = ['!','@','#','$','%','^','&','*'];
 var length = 0;
 
 function generatePassword() {
+  // Asks how long they want their password to be
   length = prompt('Enter password length');
     if(!length | length < 8 | length > 128) {
       alert('Password length must be between 8 and 128 characters');
@@ -96,9 +97,8 @@ var randomPassword = '';
     randomPassword = '' + randomPassword + confirmed[Math.floor(Math.random()*confirmed.length)];
   }
   console.log('Randomly Generated Password is ' + randomPassword)
-
-alert('Your randomly generated password is ' + randomPassword)
-
+  alert('Your randomly generated password is ' + randomPassword)
+  return randomPassword;
 }
 
 // Write password to the #password input
